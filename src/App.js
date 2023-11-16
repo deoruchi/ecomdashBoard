@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Home } from "./pages/Home";
 
+import { BrowserRouter, Router, Route, Routes } from "react-router-dom";
+
+import { Signin } from "./pages/Signin";
+import { PrivateComponents } from "./Components/PrivateComponents";
+import { Login } from "./pages/Login";
+import { Header } from "./layout/Header";
+import { Products } from "./pages/Products";
+import { useEffect } from "react";
+import { UpdateProd } from "./pages/UpdateProd";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="flex flex-row h-[100vh] w-full">
+        <Header />
+        <Routes>
+          <Route element={<PrivateComponents />}>
+            <Route path="/" element={<Products />}>
+              {" "}
+            </Route>
+            <Route path="/UpdateProd/:id" element={<UpdateProd />}>
+              {" "}
+            </Route>
+            {/* <Route path="/Profile" element={<h1>Profile Page</h1>}>
+              {" "}
+            </Route> */}
+          </Route>
+          <Route path="/Signin" element={<Signin />}></Route>
+          <Route path="/Login" element={<Login />}></Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
