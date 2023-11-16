@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ecomdashBoard/static/css/main.6555e0b1.css",
+    "main.js": "/ecomdashBoard/static/js/main.9ef9d4f1.js",
+    "index.html": "/ecomdashBoard/index.html",
+    "main.6555e0b1.css.map": "/ecomdashBoard/static/css/main.6555e0b1.css.map",
+    "main.9ef9d4f1.js.map": "/ecomdashBoard/static/js/main.9ef9d4f1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6555e0b1.css",
+    "static/js/main.9ef9d4f1.js"
+  ]
+}
