@@ -16,13 +16,14 @@ function App() {
       <div className="flex flex-row h-[100vh] w-full">
         <Header />
         <Routes>
-          <Route element={<PrivateComponents />}>
-            <Route path="/" element={<Products />}>
+          <Route path="/" element={<PrivateComponents />}>
+            <Route path="/product" element={<Products />}>
               {" "}
             </Route>
             <Route path="/UpdateProd/:id" element={<UpdateProd />}>
               {" "}
             </Route>
+
             {/* <Route path="/Profile" element={<h1>Profile Page</h1>}>
               {" "}
             </Route> */}
